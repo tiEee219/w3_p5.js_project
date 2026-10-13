@@ -10,7 +10,8 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(720, 400);
+  let myCanvas = createCanvas(720, 400);
+  myCanvas.parent("myContainer");
   noStroke();
   x = width / 2;
   y = height / 2;
@@ -21,7 +22,7 @@ function setup() {
 }
 
 function draw() {
-  background(51);
+  background("#fff7f0");
 
   let level = 0;
 
@@ -35,7 +36,7 @@ function draw() {
   x = lerp(x, targetX, 0.05);
   y = lerp(y, targetY, 0.05);
 
-  fill(255);
+  fill("#e98aaa");
   ellipse(x, y, 66, 66);
   textAlign(CENTER, CENTER);
   textSize(16);
@@ -43,7 +44,7 @@ function draw() {
   let message = beat.isPlaying()
     ? "Click to stop"
     : "Click to play";
-
+  fill("#5d083b");
   text(message, width / 2, height - 25);
 }
 

@@ -37,7 +37,7 @@ function draw() {
   y = lerp(y, targetY, 0.05);
 
   fill("#e98aaa");
-  ellipse(x, y, 66, 66);
+  ellipse(x, y, 77, 77);
   textAlign(CENTER, CENTER);
   textSize(16);
 
